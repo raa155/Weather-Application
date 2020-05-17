@@ -1,0 +1,287 @@
+
+    <%- include('header') %>
+
+    <% if (weatherDescription == "clear sky") { %>
+        <div class="jumbotron card card-image" style="background-image: url(https://images.unsplash.com/photo-1506588345361-5e12b7840845?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+            <div class="color-overlay text-white text-center py-5 px-4">
+            <div class="container weather-container" >
+                <div class="row p-3">
+                    <div class="col-lg-12 text-center">
+                        <h1><%= city %></h1>
+                        <p class="lead">as of <%= day %></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-3">
+                 
+            
+                    </div>
+                    <div class="col-lg-3">
+                        <h2><%= temp %> &#176;</h2>
+                        <h3><%= weatherDescription %></h3>
+                        
+                      
+                     
+            
+                    </div>
+        
+                    <div class="col-lg-3 text-center"> <img src= <%= imageURL %> alt=""></div>
+        
+                    <div class="col-lg-3">
+                 
+            
+                    </div>
+        
+                </div>
+                <hr>
+                <div class="row p-5">
+                    <div class="col-lg-4 text-center">
+                        <p> Feels Like  <%= feelsLike %> &#176;</p>
+                        <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                       </div>
+                    <div class="col-lg-4 text-center">
+                      <p> Atmospheric Pressure  <%= pressure %> in. </p>
+                      <p> Humidity <%= humidity %> %  </p>
+                     </div>
+                     <div class="col-lg-4 text-center">
+                      <p>  <%= wind %> mph <%= windDirection %> </p>
+                      <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                     </div>
+                    
+                      
+                  </div> 
+                  <hr>
+            </div>
+            </div>
+        </div>
+    <% } else if(weatherDescription == "few clouds" || weatherDescription == "scattered clouds" || weatherDescription == "broken clouds") { %>
+        <div class="jumbotron card card-image " style="background-image: url(https://images.unsplash.com/photo-1511680321409-d92a85fc4f66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80);">
+            <div class=" color-overlay text-white text-center py-5 px-4">
+                <div class="container weather-container" >
+                    <div class="row p-3">
+                        <div class="col-lg-12 text-center">
+                            <h1><%= city %></h1>
+                            <p class="lead">as of <%= day %></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-3">
+                     
+                
+                        </div>
+                        <div class="col-lg-3">
+                            <h2><%= temp %> &#176;</h2>
+                            <h3><%= weatherDescription %></h3>
+                            
+                          
+                         
+                
+                        </div>
+            
+                        <div class="col-lg-3 text-center"> <img src= <%= imageURL %> alt=""></div>
+            
+                        <div class="col-lg-3">
+                     
+                
+                        </div>
+            
+                    </div>
+                    <hr>
+                    <div class="row p-5">
+                        <div class="col-lg-4 text-center">
+                            <p> Feels Like  <%= feelsLike %> &#176;</p>
+                            <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                           </div>
+                        <div class="col-lg-4 text-center">
+                          <p> Atmospheric Pressure  <%= pressure %> in. </p>
+                          <p> Humidity <%= humidity %> %  </p>
+                         </div>
+                         <div class="col-lg-4 text-center">
+                          <p>  <%= wind %> mph <%= windDirection %> </p>
+                          <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                         </div>
+                        
+                          
+                      </div>  
+                      <hr>   
+                </div>
+            </div>
+        </div>
+    <% } else if (weatherDescription == "shower rain" || weatherDescription == "rain" || weatherDescription == "thunderstorm") { %>
+        <div class="jumbotron card card-image" style="background-image: url(https://images.unsplash.com/photo-1509635022432-0220ac12960b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);">
+                <div class=" color-overlay text-white text-center py-5 px-4">
+                    <div class="container weather-container" >
+                        <div class="row p-3">
+                            <div class="col-lg-12 text-center">
+                                <h1><%= city %></h1>
+                                <p class="lead">as of <%= day %></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-3">
+                         
+                    
+                            </div>
+                            <div class="col-lg-3">
+                                <h2><%= temp %> &#176;</h2>
+                                <h3><%= weatherDescription %></h3>
+                                
+                              
+                             
+                    
+                            </div>
+                
+                            <div class="col-lg-3 text-center"> <img src= <%= imageURL %> alt=""></div>
+                
+                            <div class="col-lg-3">
+                         
+                    
+                            </div>
+                
+                        </div>
+                        <hr>
+                        <div class="row p-5">
+                            <div class="col-lg-4 text-center">
+                                <p> Feels Like  <%= feelsLike %> &#176;</p>
+                                <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                               </div>
+                            <div class="col-lg-4 text-center">
+                              <p> Atmospheric Pressure  <%= pressure %> in. </p>
+                              <p> Humidity <%= humidity %> %  </p>
+                             </div>
+                             <div class="col-lg-4 text-center">
+                              <p>  <%= wind %> mph <%= windDirection %> </p>
+                              <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                             </div>
+                            
+                              
+                          </div>   
+                          <hr>  
+                    </div>
+                </div>
+        </div>
+    <% } else if (weatherDescription == "snow") { %>
+        <div class=" jumbotron card card-image" style="background-image: url(https://images.unsplash.com/photo-1542601098-8fc114e148e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+                <div class=" color-overlay text-white text-center py-5 px-4">
+                    <div class="container weather-container" >
+                        <div class="row p-3">
+                            <div class="col-lg-12 text-center">
+                                <h1><%= city %></h1>
+                                <p class="lead">as of <%= day %></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-3">
+                         
+                    
+                            </div>
+                            <div class="col-lg-3">
+                                <h2><%= temp %> &#176;</h2>
+                                <h3><%= weatherDescription %></h3>
+                                
+                              
+                             
+                    
+                            </div>
+                
+                            <div class="col-lg-3 text-center"> <img src= <%= imageURL %> alt=""></div>
+                
+                            <div class="col-lg-3">
+                         
+                    
+                            </div>
+                
+                        </div>
+                        <hr>
+                        <div class="row p-5">
+                            <div class="col-lg-4 text-center">
+                                <p> Feels Like  <%= feelsLike %> &#176;</p>
+                                <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                               </div>
+                            <div class="col-lg-4 text-center">
+                              <p> Atmospheric Pressure  <%= pressure %> in. </p>
+                              <p> Humidity <%= humidity %> %  </p>
+                             </div>
+                             <div class="col-lg-4 text-center">
+                              <p>  <%= wind %> mph <%= windDirection %> </p>
+                              <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                             </div>
+                            
+                              
+                          </div>   
+                          <hr>  
+                    </div>
+                </div>
+        </div>
+    <% } else if (weatherDescription == "mist") { %>
+        <div class=" jumbotron card card-image" style="background-image: url(https://images.unsplash.com/photo-1524260855046-f743b3cdad07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1401&q=80);">
+             <div class=" color-overlay text-white text-center py-5 px-4">
+                <div class="container weather-container" >
+                    <div class="row p-3">
+                        <div class="col-lg-12 text-center">
+                            <h1><%= city %></h1>
+                            <p class="lead">as of <%= day %></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-3">
+                     
+                
+                        </div>
+                        <div class="col-lg-3">
+                            <h2><%= temp %> &#176;</h2>
+                            <h3><%= weatherDescription %></h3>
+                            
+                          
+                         
+                
+                        </div>
+            
+                        <div class="col-lg-3 text-center"> <img src= <%= imageURL %> alt=""></div>
+            
+                        <div class="col-lg-3">
+                     
+                
+                        </div>
+            
+                    </div>
+                    <hr>
+                    <div class="row p-5">
+                        <div class="col-lg-4 text-center">
+                            <p> Feels Like  <%= feelsLike %> &#176;</p>
+                            <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                           </div>
+                        <div class="col-lg-4 text-center">
+                          <p> Atmospheric Pressure  <%= pressure %> in. </p>
+                          <p> Humidity <%= humidity %> %  </p>
+                         </div>
+                         <div class="col-lg-4 text-center">
+                          <p>  <%= wind %> mph <%= windDirection %> </p>
+                          <p> High  <%= tempHighs %> &#176; / Low <%= tempLows %> &#176; </p>
+                         </div>
+                        
+                          
+                      </div>   
+                      <hr>  
+                </div>
+            </div>
+        </div>
+    <% } %>
+
+
+
+
+
+
+
+
+
+   
+
+    
+    <%- include('footer') %>
